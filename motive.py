@@ -1,19 +1,19 @@
 import googlemaps
-import pprint  # used to make shit easier to read
+import pprint  # used to make stuff easier to read
 import time
 import requests
 
 
 def motive(address, address2, x):
 
-    API_KEY = 'AIzaSyDlGREDN8stPvjn5ufbZdenr3p9WLEX2w0'
+    API_KEY = 'api_key'
 
-    gmap = googlemaps.Client('AIzaSyDlGREDN8stPvjn5ufbZdenr3p9WLEX2w0')
+    gmap = googlemaps.Client('api_key')
 
     response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address=' +
-                            address+'&key=AIzaSyDlGREDN8stPvjn5ufbZdenr3p9WLEX2w0')
+                            address+'api_key')
     response2 = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address=' +
-                             address2+'&key=AIzaSyDlGREDN8stPvjn5ufbZdenr3p9WLEX2w0')
+                             address2+'&key= 'api_key')
 
     address_lat = response.json()['results'][0]['geometry']['location']['lat']
     address_lng = response.json()['results'][0]['geometry']['location']['lng']
