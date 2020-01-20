@@ -6,14 +6,14 @@ import requests
 
 def motive(address, address2, x):
 
-    API_KEY = 'api_key'
+    API_KEY = 'AIzaSyDlGREDN8stPvjn5ufbZdenr3p9WLEX2w0'
 
-    gmap = googlemaps.Client('api_key')
+    gmap = googlemaps.Client('AIzaSyDlGREDN8stPvjn5ufbZdenr3p9WLEX2w0')
 
     response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address=' +
-                            address+'api_key')
+                            address+'&key=AIzaSyDlGREDN8stPvjn5ufbZdenr3p9WLEX2w0')
     response2 = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address=' +
-                             address2+'&key= 'api_key')
+                             address2+'&key=AIzaSyDlGREDN8stPvjn5ufbZdenr3p9WLEX2w0')
 
     address_lat = response.json()['results'][0]['geometry']['location']['lat']
     address_lng = response.json()['results'][0]['geometry']['location']['lng']
